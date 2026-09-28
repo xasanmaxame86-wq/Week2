@@ -1,0 +1,51 @@
+<?php
+
+$students = array(
+    "CA221_1" => array(
+        "Name" => "xasan mohamed xasan",
+        "Phone" => "0612270109",
+        "Address" => "hodan,bakaro"
+    ),
+
+    "CA223" => array(
+        "Name" => "xusen maxamed xasan",
+        "Phone" => "0612993408",
+        "Address" => "Taleex, Hodan"
+    ),
+
+    "CA221_2" => array(
+        "Name" => "feysal Nur Adan",
+        "Phone" => "0616990276",
+        "Address" => "tabakayo madow, Dharkeynley"
+    )
+);
+
+echo "<table border='1' cellpadding='10' cellspacing='0'>";
+
+echo "<tr>";
+echo "<th></th>";
+echo "<th>Name</th>";
+echo "<th>Phone</th>";
+echo "<th>Address</th>";
+echo "</tr>";
+
+foreach ($students as $key => $student) {
+
+    echo "<tr>";
+
+    if ($key == "CA221_1" || $key == "CA221_2") {
+        echo "<td>CA221</td>";
+    } else {
+        echo "<td>CA223</td>";
+    }
+
+    echo "<td>" . $student["Name"] . "</td>";
+    echo "<td>" . $student["Phone"] . "</td>";
+    echo "<td>" . $student["Address"] . "</td>";
+
+    echo "</tr>";
+}
+
+echo "</table>";
+
+?>
